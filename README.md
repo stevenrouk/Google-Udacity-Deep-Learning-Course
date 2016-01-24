@@ -1,3 +1,3 @@
-# Google Udactiy Deep Learning Course
+# Google Udacity Deep Learning Course
 
 Woohoo!
