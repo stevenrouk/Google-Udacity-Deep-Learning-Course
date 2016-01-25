@@ -41,18 +41,20 @@ import matplotlib.pyplot as plt
 x = np.linspace(-2.0, 6.0, num=81)  # increases by 0.1, more consistent than np.arange()
 scores = np.vstack([x, np.ones_like(x), 0.2 * np.ones_like(x)])
 
-plt.plot(x, softmax_answer(scores).T, linewidth=2)
+probabilities = softmax_answer(scores)
+
+plt.plot(x, probabilities.T, linewidth=2)
 
 
 # PLOT BAR CHART SUMS OF PROBABILITIES
-x_scores = softmax_answer(scores).T[:,0]
-one_scores = softmax_answer(scores).T[:,1]
-point_two_scores = softmax_answer(scores).T[:,2]
+x_scores = probabilities.T[:,0]
+one_scores = probabilities.T[:,1]
+point_two_scores = probabilities.T[:,2]
 
 width = 0.1
 
 p1 = plt.bar(x, x_scores, width, color='b', alpha=0.25)
-p2 = plt.bar(x, one_scores, width, color='r', bottom=x_scores, alpha=0.25)
-p2 = plt.bar(x, point_two_scores, width, color='g', bottom=x_scores+one_scores, alpha=0.25)
+p2 = plt.bar(x, one_scores, width, color='g', bottom=x_scores, alpha=0.25)
+p2 = plt.bar(x, point_two_scores, width, color='r', bottom=x_scores+one_scores, alpha=0.25)
 
 plt.show()
