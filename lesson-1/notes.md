@@ -8,4 +8,4 @@ That's a scary, meaningless equation if you don't know what all the letters mean
 
 # Input
 
-That's the *X* up there, the data that we're feeding in. An example could be ```python [3.0, 1.0, 0.2]```.
+That's the *X* up there, the data that we're feeding in. An example could be ```scores = [3.0, 1.0, 0.2]```.
