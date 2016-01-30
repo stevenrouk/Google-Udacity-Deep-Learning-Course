@@ -2,3 +2,6 @@
 env
 *.exe
 *.db
+notMNIST_large
+notMNIST_small
+*.tar.gz
