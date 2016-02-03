@@ -5,3 +5,4 @@ env
 notMNIST_large
 notMNIST_small
 *.tar.gz
+*.pickle
